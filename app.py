@@ -9,6 +9,7 @@ programming = st.slider("Programming Marks", 0, 100, 50)
 english = st.slider("English Marks", 0, 100, 50)
 
 st.info("Enter your marks to receive personalized learning recommendations.")
+
 def recommendation(marks):
     if marks < 50:
         return "Weak", "Practice MCQs and Beginner Lessons"
