@@ -65,12 +65,15 @@ if st.button("Generate Recommendations"):
     else:
         st.write("✓ English performance is strong.")
 
-        st.subheader(" AI Decision Explanation")
+        st.subheader("📊 System Performance Metrics")
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.write("Testing Samples: 20 students")
-    with col2:
-    st.write("Recommendation Accuracy: 90%")
-    with col3:
-    st.write("Rule Coverage: 100%")
+    st.metric("Testing Samples", "20")
+
+with col2:
+    st.metric("Recommendation Accuracy", "90%")
+
+with col3:
+    st.metric("Rule Coverage", "100%")
