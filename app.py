@@ -2,12 +2,13 @@ import streamlit as st
 import matplotlib.pyplot as plt
 # Personalized recommendation logic based on student performance
 
-st.title("AI Tutor for Personalized Learning")
+st.title("🎓 AI Tutor for Personalized Learning")
 
 math = st.slider("Math Marks", 0, 100, 50)
 programming = st.slider("Programming Marks", 0, 100, 50)
 english = st.slider("English Marks", 0, 100, 50)
 
+st.info("Enter your marks to receive personalized learning recommendations.")
 def recommendation(marks):
     if marks < 50:
         return "Weak", "Practice MCQs and Beginner Lessons"
@@ -16,9 +17,9 @@ def recommendation(marks):
     else:
         return "Strong", "Advanced Exercises and Projects"
 
-if st.button("Generate Recommendations"):
+if st.button("Generate AI Recommendations"):
 
-    st.header("Results")
+    st.header("📊 Student Performance Results")
 
     for subject, marks in {
         "Math": math,
@@ -77,3 +78,4 @@ with col2:
 
 with col3:
     st.metric("Rule Coverage", "100%")
+    
