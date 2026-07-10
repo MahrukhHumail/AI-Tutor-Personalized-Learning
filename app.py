@@ -1,5 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+# Personalized recommendation logic based on student performance
 
 st.title("AI Tutor for Personalized Learning")
 
@@ -41,7 +42,7 @@ if st.button("Generate Recommendations"):
     ax.set_ylim(0,100)
 
     st.pyplot(fig)
-    st.subheader("🔍 Why this recommendation?")
+    st.subheader(" Why this recommendation?")
 
     if math < 50:
         st.write("✓ Math score is below 50%, so practice MCQs and beginner lessons are recommended.")
@@ -64,8 +65,12 @@ if st.button("Generate Recommendations"):
     else:
         st.write("✓ English performance is strong.")
 
-        st.subheader("📊 System Performance Metrics")
+        st.subheader(" AI Decision Explanation")
+col1, col2, col3 = st.columns(3)
 
+with col1:
     st.write("Testing Samples: 20 students")
+    with col2:
     st.write("Recommendation Accuracy: 90%")
+    with col3:
     st.write("Rule Coverage: 100%")
