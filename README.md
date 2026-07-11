@@ -60,4 +60,8 @@ The system was tested using sample student data.
 - Testing Samples: 20 students
 - Recommendation Accuracy: 90%
 - Rule Coverage: 100%
-Project documentation completed with explainability and performance metrics.
+Project documentation completed with explainability and performance metrics. 
+
+## Project Screenshots
+
+The application interface, results, charts and AI explanations are included in the screenshots folder.
