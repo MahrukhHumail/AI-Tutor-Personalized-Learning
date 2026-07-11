@@ -44,7 +44,7 @@ if st.button("Generate AI Recommendations"):
     ax.set_ylim(0,100)
 
     st.pyplot(fig)
-    st.subheader(" Why this recommendation?")
+    st.subheader("🤖 AI Decision Explanation")
 
     if math < 50:
         st.write("✓ Math score is below 50%, so practice MCQs and beginner lessons are recommended.")
