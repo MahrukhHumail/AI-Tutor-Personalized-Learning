@@ -40,7 +40,7 @@ if st.button("Generate AI Recommendations"):
     scores = [math, programming, english]
 
     ax.bar(subjects, scores)
-
+    ax.set_title("Student Marks Comparison")
     ax.set_ylim(0,100)
 
     st.pyplot(fig)
