@@ -10,6 +10,8 @@ english = st.slider("English Marks", 0, 100, 50)
 
 st.info("Enter your marks to receive personalized learning recommendations.")
 
+# This function analyes student marks
+# and provides personalized Learning recommendations
 def recommendation(marks):
     if marks < 50:
         return "Weak", "Practice MCQs and Beginner Lessons"
@@ -33,18 +35,23 @@ if st.button("Generate AI Recommendations"):
         st.subheader(subject)
         st.write("Level:", level)
         st.write("Recommendation:", rec)
-
+        
+    average = (math + programming + english) / 3
+     
+    st.subheader("Overall Performance")
+    st.write("Average Score:", round(average, 2))
+    
     fig, ax = plt.subplots()
 
     subjects = ["Math", "Programming", "English"]
     scores = [math, programming, english]
 
     ax.bar(subjects, scores)
-
+    ax.set_title("Student Marks Comparison")
     ax.set_ylim(0,100)
 
     st.pyplot(fig)
-    st.subheader(" Why this recommendation?")
+    st.subheader("🤖 AI Decision Explanation")
 
     if math < 50:
         st.write("✓ Math score is below 50%, so practice MCQs and beginner lessons are recommended.")
