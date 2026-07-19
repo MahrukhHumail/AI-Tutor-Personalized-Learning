@@ -41,15 +41,17 @@ if st.button("Generate AI Recommendations"):
     st.subheader("Overall Performance")
     st.write("Average Score:", round(average, 2))
 
+         
     if average < 50:
-     overall = "Needs Improvement"
-   elif average < 75:
-      overall = "Good"
-else:
-    overall = "Excellent"
-
-st.write("Overall Level:", overall)
-
+            overall = "Need Improvement"
+         
+    elif average < 75:
+             overall = "Good"    
+        
+    else: 
+          overall = "Excellent"
+    
+    st.write("Overall Level:", overall)
     fig, ax = plt.subplots()
 
     subjects = ["Math", "Programming", "English"]
