@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 
 st.title("🎓 AI Tutor for Personalized Learning")
 
+# Enhanced student input module for collecting subject marks
+
 math = st.slider("Math Marks", 0, 100, 50)
 programming = st.slider("Programming Marks", 0, 100, 50)
 english = st.slider("English Marks", 0, 100, 50)
